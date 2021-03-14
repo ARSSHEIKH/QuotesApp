@@ -40,13 +40,15 @@ body{
     /* animation: rot 1s linear; */
     /* animation: App-logo-float infinite 3s ease-in-out; */
     border-radius: 20px;
-      animation: img-spin infinite 5s linear;
+    animation: img-spin infinite 5s linear;
 }
 
 @media (prefers-reduced-motion: no-preference) {
     img {
       animation: img-float infinite 3s ease-in-out;
-
+    }
+    .card-body{
+      animation: card-float infinite 3s ease-in-out;
     }
   }
 /* @keyframes rot{
@@ -59,6 +61,18 @@ body{
 } */
 @keyframes img-float {
   0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px)
+  }
+  100% {
+    transform: translateX(0px)
+  }
+}
+
+@keyframes card-float   {
+  0% {
     transform: translateY(0);
   }
   50% {
@@ -68,8 +82,7 @@ body{
     transform: translateY(0px)
   }
 }
-
-@keyframes img-spin {
+@keyframes img-spin  {
     from {
       transform: rotate(0deg);
     }
@@ -79,6 +92,9 @@ body{
   }
 .start-quote{
     color: rgb(78, 77, 76);
+}
+.card-body{
+
 }
 .button{
     padding: 10px;
